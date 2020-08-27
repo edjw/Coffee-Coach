@@ -31,6 +31,7 @@
   </label>
   <input
     type="number"
+    inputmode="decimal"
     name="waterAmount"
     id="waterAmount"
     bind:value={waterAmount} />

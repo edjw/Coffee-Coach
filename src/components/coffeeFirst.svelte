@@ -31,6 +31,7 @@
   </label>
   <input
     type="number"
+    inputmode="decimal"
     name="coffeeAmount"
     id="coffeeAmount"
     bind:value={coffeeAmount} />
