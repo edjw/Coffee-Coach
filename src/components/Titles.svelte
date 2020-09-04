@@ -5,7 +5,16 @@
 
 <style>
   section {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+  }
+  h1 a {
+    text-decoration: none;
+  }
+
+  p {
+    font-size: 105%;
+    font-variant: small-caps;
+    margin-top: 0.5rem;
   }
 </style>
 
@@ -14,6 +23,6 @@
   <h1>
     <a rel="prefetch" href="/">{title}</a>
   </h1>
-  <h2>{subtitle}</h2>
+  <p>{subtitle}</p>
 
 </section>

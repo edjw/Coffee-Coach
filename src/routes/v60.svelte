@@ -1,10 +1,9 @@
 <script>
-  import CoffeeFirst from "../components/coffeeFirst.svelte";
-  import WaterFirst from "../components/waterFirst.svelte";
+  import CoffeeFirst from "../components/v60/coffeeFirst.svelte";
+  import WaterFirst from "../components/v60/waterFirst.svelte";
+  import PourAmounts from "../components/v60/pourAmounts.svelte";
 
   let currentCalculator = "coffeeFirst";
-  let waterAsMultipleOfCoffee = 16.66666666666667;
-  // This is equivalent to 30g coffee to 500g water (500 ÷ 30 = 16.67)
 
   const toggleCalculator = () => {
     if (currentCalculator === "coffeeFirst") {
@@ -27,17 +26,26 @@
   <title>Coffee Coach – {recipeName}</title>
 </svelte:head>
 
-<h3>{recipeName}</h3>
+<h2>{recipeName}</h2>
 
 <section>
+  <h3>Ingredients</h3>
 
   {#if currentCalculator === 'coffeeFirst'}
-    <CoffeeFirst
-      on:togglecalculator={toggleCalculator}
-      {waterAsMultipleOfCoffee} />
+    <CoffeeFirst on:togglecalculator={toggleCalculator} />
   {:else if currentCalculator === 'waterFirst'}
-    <WaterFirst
-      on:togglecalculator={toggleCalculator}
-      {waterAsMultipleOfCoffee} />
+    <WaterFirst on:togglecalculator={toggleCalculator} />
   {/if}
+</section>
+
+<section>
+  <h3>Pouring</h3>
+
+  <PourAmounts />
+</section>
+
+<section>
+  This is a recipe simplified from <a
+    href="https://www.youtube.com/watch?v=AI4ynXzkSQo">James Hoffman's video '<i>The
+      Ultimate V60 Technique</i></a>.'
 </section>
