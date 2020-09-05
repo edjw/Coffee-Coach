@@ -41,7 +41,7 @@
   <ol>
     <li>
       <label for="waterAmount">
-        How many <strong>grams of water</strong> do you want to use?
+        How many <strong>grams of coffee</strong> do you want to make?
       </label>
     </li>
     <input
@@ -52,7 +52,7 @@
       bind:value={$waterAmount} />
 
     <li id="coffeeAmount">
-      Then use <strong>{$coffeeAmount}g</strong> of coffee.
+      Use <strong>{$coffeeAmount}g</strong> of coffee grounds.
     </li>
   </ol>
 
