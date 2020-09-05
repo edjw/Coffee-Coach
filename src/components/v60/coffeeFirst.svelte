@@ -30,11 +30,12 @@
   }
 
   ol {
-    padding-left: 1rem;
+    padding-left: 0;
   }
 
   li {
     margin-top: 1.5rem;
+    list-style-position: inside;
   }
 </style>
 

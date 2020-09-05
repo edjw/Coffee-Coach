@@ -1,7 +1,7 @@
 const pages = [
     {
-        title: "James Hoffman's v60 recipe",
-        slug: 'v60',
+        title: "v60 by James Hoffman",
+        slug: 'v60-by-james-hoffman',
     },
 
 ];
