@@ -57,6 +57,6 @@
     </li>
   </ol>
   <button id="startWithWater" on:click={toggleCalculator}>
-    Start with water instead
+    Start with water instead ⟳
   </button>
 </section>

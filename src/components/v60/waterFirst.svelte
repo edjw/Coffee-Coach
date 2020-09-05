@@ -56,6 +56,6 @@
   </ol>
 
   <button id="startWithCoffee" on:click={toggleCalculator}>
-    Start with coffee instead
+    Start with coffee instead ⟳
   </button>
 </section>

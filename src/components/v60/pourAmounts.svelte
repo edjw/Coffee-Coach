@@ -39,11 +39,11 @@
     </strong>
   </li>
   <li>
-    <i>45 - 1m15s</i>: Pour water until you've poured in a total of <strong>{firstPour}g
+    <i>45s - 1m15s</i>: Pour until you've poured in a total of <strong>{firstPour}g
       of water</strong>
   </li>
   <li>
-    <i>1m15s - 1m45s</i>: Pour in a further {secondPour}g of water for a <strong>total
-      weight of {totalPour}g</strong>
+    <i>1m15s - 1m45s</i>: Pour a further {secondPour}g of water for a <strong>total
+      of {totalPour}g</strong>
   </li>
 </ol>

@@ -5,7 +5,7 @@
 
 <style>
   section {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   h1 a {
     text-decoration: none;
@@ -19,10 +19,6 @@
 </style>
 
 <section>
-
-  <h1>
-    <a rel="prefetch" href="/">{title}</a>
-  </h1>
+  <h1><a rel="prefetch" href="/">{title}</a></h1>
   <p>{subtitle}</p>
-
 </section>

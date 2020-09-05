@@ -13,12 +13,18 @@
     }
   };
 
-  let recipeName = "James Hoffman's v60 recipe";
+  let recipeName = "v60 by James Hoffman";
 </script>
 
 <style>
   section {
     margin-top: 2rem;
+  }
+
+  h2 {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 14px 0 16px 0;
   }
 </style>
 
