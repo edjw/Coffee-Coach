@@ -43,7 +43,7 @@
   <ol>
     <li>
       <label for="coffeeAmount">
-        How many <strong>grams of coffee</strong> do you want to use?
+        How many <strong>grams of coffee grounds</strong> do you want to use?
       </label>
     </li>
     <input
@@ -53,9 +53,7 @@
       id="coffeeAmount"
       bind:value={$coffeeAmount} />
 
-    <li id="waterAmount">
-      Then use <strong>{newWaterAmount}g</strong> of water.
-    </li>
+    <li id="waterAmount">Use <strong>{newWaterAmount}g</strong> of water.</li>
   </ol>
   <button id="startWithWater" on:click={toggleCalculator}>
     Start with water instead ⟳
