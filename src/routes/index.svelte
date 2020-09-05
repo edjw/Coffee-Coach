@@ -12,7 +12,7 @@
 </style>
 
 <svelte:head>
-  <title>Coffee Coach – V60</title>
+  <title>Coffee Coach – Home</title>
 </svelte:head>
 
 <ul>
