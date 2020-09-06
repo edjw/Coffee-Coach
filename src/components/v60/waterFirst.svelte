@@ -51,7 +51,7 @@
       bind:value={$waterAmount} />
 
     <li id="coffeeAmount">
-      Use <strong>{#if $coffeeAmount === undefined}0{:else}{$coffeeAmount}{/if}g</strong>
+      Use <strong>{#if isNaN($waterAmount)}0{:else}{$coffeeAmount}{/if}g</strong>
       of coffee grounds.
     </li>
   </ol>
