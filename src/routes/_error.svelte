@@ -23,14 +23,28 @@
 </svelte:head>
 
 <main>
-  <h3>{status}</h3>
+  {#if status === 500}
+    <h3>That broke the app!</h3>
+    <p>
+      Sorry about that. This is <a
+        href="https://github.com/edjw/Coffee-Coach/issues/1">a known bug</a>.
+    </p>
+    <p>
+      Avoid refreshing or closing the webpage with the first ingredient input
+      box empty. That's what causes the app to break.
+    </p>
 
-  <p>{error.message}</p>
+    <p>Click the 'Reset app' button to make the app work again.</p>
 
-  {#if dev && error.stack}
-    <pre>{error.stack}</pre>
+    <button on:click={clearLocalStorage}>Reset app</button>
+    <!-- This is a hack to get around a bug where if you reload the page with an input empty, it saves undefined or NaN to local storage then can't work out important data from that. -->
+  {:else}
+    <h3>{status}</h3>
+
+    <p>{error.message}</p>
+
+    {#if dev && error.stack}
+      <pre>{error.stack}</pre>
+    {/if}
   {/if}
-
-  {#if status === 500}<button on:click={clearLocalStorage}>Reset</button>{/if}
-  <!-- This is a hack to get around a bug where if you reload the page with an input empty, it saves undefined or NaN to local storage then can't work out important data from that. -->
 </main>

@@ -34,13 +34,13 @@
 
 <ol>
   <li>
-    <i>0 - 45s</i>: Pour a bloom of <strong>{#if $coffeeAmount === undefined || isNaN($waterAmount)}
+    <i>0 - 45s</i>: Pour the bloom with <strong>{#if $coffeeAmount === undefined || isNaN($waterAmount)}
         0g (maximum 0g) of water
       {:else}{minimumBloom}g (maximum {maximumBloom}g) of water{/if}
     </strong>
   </li>
   <li>
-    <i>45s - 1m15s</i>: Pour until you've poured in a total of <strong>{#if $coffeeAmount === undefined || isNaN($waterAmount)}
+    <i>45s - 1m15s</i>: Pour again until you've poured a total of <strong>{#if $coffeeAmount === undefined || isNaN($waterAmount)}
         0g of water
       {:else}{firstPour}g of water{/if}</strong>
   </li>
