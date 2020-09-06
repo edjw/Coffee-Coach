@@ -32,4 +32,5 @@
   {/if}
 
   {#if status === 500}<button on:click={clearLocalStorage}>Reset</button>{/if}
+  <!-- This is a hack to get around a bug where if you reload the page with an input empty, it saves undefined or NaN to local storage then can't work out important data from that. -->
 </main>
