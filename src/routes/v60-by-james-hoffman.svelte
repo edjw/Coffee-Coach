@@ -3,17 +3,7 @@
   import WaterFirst from "../components/v60/waterFirst.svelte";
   import PourAmounts from "../components/v60/pourAmounts.svelte";
 
-  import { currentCalculator } from "../components/v60/v60store";
-
-  // let currentCalculator = "coffeeFirst";
-
-  const toggleCalculator = () => {
-    if ($currentCalculator === "coffeeFirst") {
-      currentCalculator.set("waterFirst");
-    } else if ($currentCalculator === "waterFirst") {
-      currentCalculator.set("coffeeFirst");
-    }
-  };
+  import { currentCalculator } from "../components/v60/v60store.js";
 
   let recipeName = "v60 by James Hoffman";
 </script>
@@ -41,10 +31,10 @@
 <section>
   <h3>Ingredients</h3>
 
-  {#if $currentCalculator == "coffeeFirst"}
-    <CoffeeFirst on:togglecalculator={toggleCalculator} />
-  {:else if $currentCalculator == "waterFirst"}
-    <WaterFirst on:togglecalculator={toggleCalculator} />
+  {#if $currentCalculator == 'coffeeFirst'}
+    <CoffeeFirst />
+  {:else if $currentCalculator == 'waterFirst'}
+    <WaterFirst />
   {/if}
 </section>
 

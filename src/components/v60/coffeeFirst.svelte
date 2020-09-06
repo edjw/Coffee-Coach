@@ -1,20 +1,16 @@
 <script>
-  import { createEventDispatcher } from "svelte";
-  const dispatch = createEventDispatcher();
-
   import { fade } from "svelte/transition";
 
   import {
     waterAmount,
     coffeeAmount,
     waterAsMultipleOfCoffee,
+    currentCalculator,
   } from "./v60store.js";
 
   const toggleCalculator = () => {
-    dispatch("togglecalculator");
+    currentCalculator.set("waterFirst");
   };
-
-  // let newWaterAmount;
 
   $: newWaterAmount =
     Math.round($coffeeAmount * $waterAsMultipleOfCoffee * 10) / 10;
@@ -51,9 +47,13 @@
       inputmode="decimal"
       name="coffeeAmount"
       id="coffeeAmount"
+      min="0"
       bind:value={$coffeeAmount} />
 
-    <li id="waterAmount">Use <strong>{newWaterAmount}g</strong> of water.</li>
+    <li id="waterAmount">
+      Use <strong>{#if $coffeeAmount === undefined}0{:else}{$waterAmount}{/if}g</strong>
+      of water.
+    </li>
   </ol>
   <button id="startWithWater" on:click={toggleCalculator}>
     Start with water instead ⟳

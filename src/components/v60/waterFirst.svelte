@@ -1,21 +1,19 @@
 <script>
-  import { createEventDispatcher } from "svelte";
-  const dispatch = createEventDispatcher();
-
   import { fade } from "svelte/transition";
 
   import {
     waterAmount,
     coffeeAmount,
     waterAsMultipleOfCoffee,
+    currentCalculator,
   } from "./v60store.js";
 
   const toggleCalculator = () => {
-    dispatch("togglecalculator");
+    currentCalculator.set("coffeeFirst");
   };
 
   $: newCoffeeAmount =
-    Math.round(($waterAmount / $waterAsMultipleOfCoffee) * 10) / 10;
+    (Math.round($waterAmount / $waterAsMultipleOfCoffee) * 10) / 10;
 
   $: coffeeAmount.set(newCoffeeAmount);
 </script>
@@ -41,7 +39,7 @@
   <ol>
     <li>
       <label for="waterAmount">
-        How many <strong>grams of coffee</strong> do you want to make?
+        How many <strong>grams of water</strong> do you want to use?
       </label>
     </li>
     <input
@@ -49,10 +47,12 @@
       inputmode="decimal"
       name="waterAmount"
       id="waterAmount"
+      min="0"
       bind:value={$waterAmount} />
 
     <li id="coffeeAmount">
-      Use <strong>{$coffeeAmount}g</strong> of coffee grounds.
+      Use <strong>{#if $coffeeAmount === undefined}0{:else}{$coffeeAmount}{/if}g</strong>
+      of coffee grounds.
     </li>
   </ol>
 
