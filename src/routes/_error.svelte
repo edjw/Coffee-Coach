@@ -24,7 +24,7 @@
 
 <main>
   {#if status === 500}
-    <h3>That broke the app!</h3>
+    <h3>The app broke!</h3>
     <p>
       Sorry about that. This is <a
         href="https://github.com/edjw/Coffee-Coach/issues/1">a known bug</a>.
