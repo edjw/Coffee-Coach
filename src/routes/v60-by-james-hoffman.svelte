@@ -1,9 +1,6 @@
 <script>
-  import CoffeeFirst from "../components/v60/coffeeFirst.svelte";
-  import WaterFirst from "../components/v60/waterFirst.svelte";
+  import Ingredients from "../components/v60/ingredients.svelte";
   import PourAmounts from "../components/v60/pourAmounts.svelte";
-
-  import { currentCalculator } from "../components/v60/v60store.js";
 
   let recipeName = "v60 by James Hoffman";
 </script>
@@ -31,11 +28,7 @@
 <section>
   <h3>Ingredients</h3>
 
-  {#if $currentCalculator == 'coffeeFirst'}
-    <CoffeeFirst />
-  {:else if $currentCalculator == 'waterFirst'}
-    <WaterFirst />
-  {/if}
+  <Ingredients />
 </section>
 
 <section>
