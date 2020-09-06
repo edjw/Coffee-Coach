@@ -3,6 +3,11 @@
   export let error;
 
   const dev = process.env.NODE_ENV === "development";
+
+  const clearLocalStorage = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
 </script>
 
 <style>
@@ -25,4 +30,6 @@
   {#if dev && error.stack}
     <pre>{error.stack}</pre>
   {/if}
+
+  {#if status === 500}<button on:click={clearLocalStorage}>Reset</button>{/if}
 </main>
