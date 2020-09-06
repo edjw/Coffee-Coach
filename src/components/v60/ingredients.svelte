@@ -73,9 +73,9 @@
         bind:value={$coffeeAmount} />
 
       <li id="waterAmount">
-        Use <strong>{#if $coffeeAmount === undefined}
-            0
-          {:else}{secondIngredientAmount}{/if}g</strong> of water.
+        Use <strong>{#if $coffeeAmount === undefined || isNaN($waterAmount)}
+            0g
+          {:else}{secondIngredientAmount}g{/if}</strong> of water.
       </li>
     </ol>
     <button id="startWithWater" on:click={toggleCalculator}>
@@ -100,8 +100,8 @@
 
       <li id="coffeeAmount">
         Use <strong>{#if isNaN($waterAmount)}
-            0
-          {:else}{secondIngredientAmount}{/if}g</strong> of coffee grounds.
+            0g
+          {:else}{secondIngredientAmount}g{/if}</strong> of coffee grounds.
       </li>
     </ol>
 
