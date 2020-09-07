@@ -30,8 +30,9 @@
         href="https://github.com/edjw/Coffee-Coach/issues/1">a known bug</a>.
     </p>
     <p>
-      Avoid refreshing or closing the webpage with the first ingredient input
-      box empty. That's what causes the app to break.
+      Avoid refreshing or closing the webpage with the ingredient amount input
+      box with text in or empty. That's what causes the app to break. Only use
+      numbers, eg "10" or "304.29".
     </p>
 
     <p>Click the 'Reset app' button to make the app work again.</p>
