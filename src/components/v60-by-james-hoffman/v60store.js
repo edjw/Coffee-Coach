@@ -1,6 +1,6 @@
-import { writable } from "svelte-persistent-store/dist/local";
+import { writable, readable } from "svelte-persistent-store/dist/local";
 
-let waterAsMultipleOfCoffee = writable("v60WaterAsMultipleOfCoffee", 16.66666666666667);
+let waterAsMultipleOfCoffee = readable("v60WaterAsMultipleOfCoffee", 16.66666666666667);
 // This is equivalent to 30g coffee to 500g water (500 ÷ 30 = 16.67)
 
 let waterAmount = writable("v60WaterAmount", 250);
