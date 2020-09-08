@@ -43,6 +43,7 @@ a {
 }
 
 main > * + *,
-section > * + * {
+section > * + *,
+section > div > * + * {
   margin-top: 1em;
 }
