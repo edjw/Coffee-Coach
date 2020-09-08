@@ -3,17 +3,21 @@
 
   import Ingredients from "../../components/Ingredients.svelte";
 
+  import Steps from "../../components/french-press-by-james-hoffman/frenchPressSteps.svelte";
+
   import * as store from "../../components/french-press-by-james-hoffman/frenchPressStore";
 
-  let recipe = { name: "French Press by James Hoffman" };
+  let recipe = {
+    name: "French Press by James Hoffman",
+  };
 </script>
 
 <Recipe {...recipe}>
   <div slot="ingredients">
     <Ingredients {store} />
   </div>
-  <div slot="pour-amounts">
-    <!-- <PourAmounts /> -->
+  <div slot="steps">
+    <Steps />
   </div>
   <div slot="notes">
     <p>

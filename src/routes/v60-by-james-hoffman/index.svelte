@@ -3,7 +3,7 @@
 
   import Ingredients from "../../components/Ingredients.svelte";
 
-  import PourAmounts from "../../components/v60-by-james-hoffman/v60PourAmounts.svelte";
+  import Steps from "../../components/v60-by-james-hoffman/v60Steps.svelte";
 
   import * as store from "../../components/v60-by-james-hoffman/v60store";
 
@@ -14,8 +14,8 @@
   <div slot="ingredients">
     <Ingredients {store} />
   </div>
-  <div slot="pour-amounts">
-    <PourAmounts />
+  <div slot="steps">
+    <Steps />
   </div>
   <div slot="notes">
     <p>
