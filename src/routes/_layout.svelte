@@ -1,5 +1,7 @@
 <script>
   import Titles from "../components/Titles.svelte";
+
+  import { fade } from "svelte/transition";
 </script>
 
 <style>
@@ -8,10 +10,15 @@
     padding: 1rem 2rem;
     margin: 0 auto;
   }
+
+  div {
+    margin-top: 2rem;
+  }
 </style>
 
-<main>
+<main transition:fade={{ delay: 100 }}>
   <Titles />
-
-  <slot />
+  <div>
+    <slot />
+  </div>
 </main>

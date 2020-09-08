@@ -4,9 +4,6 @@
 </script>
 
 <style>
-  section {
-    margin-bottom: 2rem;
-  }
   h1 a {
     text-decoration: none;
   }
