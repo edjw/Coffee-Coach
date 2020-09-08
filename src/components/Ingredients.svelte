@@ -1,12 +1,14 @@
 <script>
-  import { fade } from "svelte/transition";
+  export let store;
 
-  import {
+  let {
     waterAmount,
     coffeeAmount,
     waterAsMultipleOfCoffee,
     currentCalculator,
-  } from "./v60store.js";
+  } = store;
+
+  import { fade } from "svelte/transition";
 
   const toggleCalculator = () => {
     if ($currentCalculator === "waterFirst") {
