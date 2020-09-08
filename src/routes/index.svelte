@@ -1,5 +1,7 @@
 <script>
   import allRecipes from "./_allRecipes";
+
+  import { fade } from "svelte/transition";
 </script>
 
 <style>
@@ -17,7 +19,7 @@
   <title>Coffee Coach – Home</title>
 </svelte:head>
 
-<ul>
+<ul in:fade={{ delay: 100 }}>
   {#each allRecipes as page}
     <li><a rel="prefetch" href={page.slug}>{page.title}</a></li>
   {/each}
