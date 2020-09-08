@@ -1,17 +1,19 @@
 <script>
   export let name;
+  import { fade } from "svelte/transition";
 </script>
 
 <style>
   h2 {
-    display: inline;
+    display: inline-block;
+    max-width: 30ch;
+    padding: 14px 16px 16px 0;
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
-    padding: 14px 16px 16px 0;
   }
 
   section {
-    margin-top: 3rem;
+    margin-top: 2rem;
     max-width: 60ch;
   }
 </style>
@@ -22,17 +24,17 @@
 
 <h2>{name}</h2>
 
-<section>
+<section in:fade={{ delay: 100 }}>
   <h3>Ingredients</h3>
   <slot name="ingredients" />
 </section>
 
-<section>
-  <h3>Pouring</h3>  
-  <slot name="pour-amounts" />
+<section in:fade={{ delay: 200 }}>
+  <h3>Steps</h3>
+  <slot name="steps" />
 </section>
 
-<section>
+<section in:fade={{ delay: 300 }}>
   <h3>Notes</h3>
   <slot name="notes" />
 </section>
