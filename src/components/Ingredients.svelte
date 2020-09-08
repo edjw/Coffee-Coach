@@ -8,7 +8,7 @@
     currentCalculator,
   } = store;
 
-  import { fade } from "svelte/transition";
+  import { blur } from "svelte/transition";
 
   const toggleCalculator = () => {
     if ($currentCalculator === "waterFirst") {
@@ -50,7 +50,7 @@
 </style>
 
 {#if $currentCalculator === 'coffeeFirst'}
-  <section id="{$currentCalculator}Calculator" in:fade={{ delay: 100 }}>
+  <section id="{$currentCalculator}Calculator" in:blur={{ delay: 100 }}>
     <label for="coffeeAmount">
       How many <strong>grams of coffee grounds</strong> do you want to use?
     </label>
@@ -66,7 +66,7 @@
     </button>
   </section>
 {:else if $currentCalculator === 'waterFirst'}
-  <section id="{$currentCalculator}Calculator" in:fade={{ delay: 100 }}>
+  <section id="{$currentCalculator}Calculator" in:blur={{ delay: 100 }}>
     <label for="waterAmount">
       How many <strong>grams of water</strong> do you want to use?
     </label>
