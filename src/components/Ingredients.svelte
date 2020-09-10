@@ -80,5 +80,10 @@
     <button id="startWithCoffee" on:click={toggleCalculator}>
       Start with coffee instead ⟳
     </button>
+    <p>
+      Use <strong>{#if isNaN($waterAmount)}
+          0g
+        {:else}{secondIngredientAmount}g{/if}</strong> of coffee grounds.
+    </p>
   </section>
 {/if}
