@@ -2,6 +2,9 @@
 
 coffee recipe app made in svelte and sapper
 
+run `yarn dev` to start the dev server
+
+
 --
 notes from original sapper readme
 

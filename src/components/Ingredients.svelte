@@ -49,10 +49,14 @@
   }
 </style>
 
+<p>{$waterAsMultipleOfCoffee}</p>
+
 {#if $currentCalculator === 'coffeeFirst'}
   <section id="{$currentCalculator}Calculator" in:blur={{ delay: 100 }}>
     <label for="coffeeAmount">
-      How many <strong>grams of coffee grounds</strong> do you want to use?
+      How many
+      <strong>grams of coffee grounds</strong>
+      do you want to use?
     </label>
     <input
       type="number"
@@ -68,7 +72,9 @@
 {:else if $currentCalculator === 'waterFirst'}
   <section id="{$currentCalculator}Calculator" in:blur={{ delay: 100 }}>
     <label for="waterAmount">
-      How many <strong>grams of water</strong> do you want to use?
+      How many
+      <strong>grams of water</strong>
+      do you want to use?
     </label>
     <input
       type="number"
@@ -81,9 +87,11 @@
       Start with coffee instead ⟳
     </button>
     <p>
-      Use <strong>{#if isNaN($waterAmount)}
+      Use
+      <strong>{#if isNaN($waterAmount)}
           0g
-        {:else}{secondIngredientAmount}g{/if}</strong> of coffee grounds.
+        {:else}{secondIngredientAmount}g{/if}</strong>
+      of coffee grounds.
     </p>
   </section>
 {/if}
