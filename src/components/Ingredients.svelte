@@ -81,9 +81,6 @@
       id="waterAmount"
       min="0"
       bind:value={$waterAmount} />
-    <button id="startWithCoffee" on:click={toggleCalculator}>
-      Start with coffee instead ⟳
-    </button>
     <p>
       Use
       <strong>{#if isNaN($waterAmount)}
