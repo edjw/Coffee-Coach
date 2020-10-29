@@ -88,5 +88,8 @@
         {:else}{secondIngredientAmount}g{/if}</strong>
       of coffee grounds.
     </p>
+    <button id="startWithCoffee" on:click={toggleCalculator}>
+      Start with coffee instead ⟳
+    </button>
   </section>
 {/if}
