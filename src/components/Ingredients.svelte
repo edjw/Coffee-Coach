@@ -49,8 +49,6 @@
   }
 </style>
 
-<p>{$waterAsMultipleOfCoffee}</p>
-
 {#if $currentCalculator === 'coffeeFirst'}
   <section id="{$currentCalculator}Calculator" in:blur={{ delay: 100 }}>
     <label for="coffeeAmount">
