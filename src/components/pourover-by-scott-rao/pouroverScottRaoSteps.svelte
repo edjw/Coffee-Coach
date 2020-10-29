@@ -10,7 +10,8 @@
 
   $: bloom = toOneDecimalPlace($coffeeAmount * 3);
 
-  $: firstPour = toOneDecimalPlace($waterAmount * 0.617);
+  // This looks like a magic number and it kind of is. It's 240/310
+  $: firstPour = toOneDecimalPlace($waterAmount * 0.6176470588235294);
 
   $: totalPour = toOneDecimalPlace($waterAmount);
 </script>
