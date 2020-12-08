@@ -1,6 +1,8 @@
 <script>
-  import { waterAmount } from "../../components/clever-by-james-hoffman/cleverStore.js";
-  import { coffeeAmount } from "../../components/clever-by-james-hoffman/cleverStore.js";
+  import {
+    waterAmount,
+    coffeeAmount,
+  } from "../../components/clever-by-james-hoffman/cleverStore.js";
 </script>
 
 <style>
