@@ -6,12 +6,18 @@
 
 <style>
   ul {
-    padding-left: 0;
+    padding-left: 2rem;
   }
   li {
     list-style-type: none;
     font-size: 120%;
-    margin-top: 1rem;
+    margin-top: 1.3rem;
+    text-indent: -2rem;
+  }
+
+  li::before {
+    content: "☕ ";
+    filter: grayscale(100%);
   }
 </style>
 
