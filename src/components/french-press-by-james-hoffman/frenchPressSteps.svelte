@@ -15,7 +15,7 @@
 </style>
 
 <ol>
-  <li>Pour in all {$waterAmount}g of the water</li>
+  <li>Pour in the coffee and all {$waterAmount}g of the water</li>
   <li>Let it sit for 4 minutes</li>
   <li>Stir the crust. Scoop up the foam and coffee bits off the top</li>
   <li>Wait for 5-8 minutes</li>

@@ -12,6 +12,10 @@ const pages = [
     title: "Pourover by Scott Rao",
     slug: "pourover-by-scott-rao",
   },
+  {
+    title: "Clever Dripper by James Hoffman",
+    slug: "clever-by-james-hoffman",
+  },
 ];
 
 export default pages;
