@@ -63,6 +63,13 @@
       id="coffeeAmount"
       min="0"
       bind:value={$coffeeAmount} />
+    <p>
+      Use
+      <strong>{#if isNaN($waterAmount)}
+          0g
+        {:else}{secondIngredientAmount}g{/if}</strong>
+      of water.
+    </p>
     <button id="startWithWater" on:click={toggleCalculator}>
       Start with water instead ⟳
     </button>

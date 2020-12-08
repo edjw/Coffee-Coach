@@ -47,3 +47,26 @@ section > * + *,
 section > div > * + * {
   margin-top: 1em;
 }
+
+div#sapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+div#sapper > header {
+  grid-area: header;
+}
+
+div#sapper > main {
+  grid-area: main;
+  /* padding: 15px 5px 10px 5px; */
+}
+
+div#sapper > footer {
+  grid-area: footer;
+}

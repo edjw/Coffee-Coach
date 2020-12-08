@@ -8,8 +8,8 @@
   main,
   footer {
     max-width: 56rem;
-    padding: 0 2rem 1rem 2rem;
-    margin: 0 auto;
+    padding: 0 2rem 1rem 3rem;
+    /* margin: 0 auto; */
   }
 
   footer {

@@ -6,8 +6,8 @@
 <style>
   header {
     max-width: 56rem;
-    padding: 1rem 2rem 0 2rem;
-    margin: 0 auto;
+    padding: 1rem 2rem 0 3rem;
+    /* margin: 0 auto; */
   }
 
   h1 a {
