@@ -51,6 +51,7 @@ button,
 }
 
 button {
+  background-color: #4caf50;
 }
 
 main > * + *,
