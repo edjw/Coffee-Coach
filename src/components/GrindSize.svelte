@@ -18,15 +18,6 @@
   }
 </script>
 
-<style>
-  /* p {
-     display: inline; 
-  }
-  button {
-     display: inline; 
-  } */
-</style>
-
 <section>
   <p>
     <i>Grind size</i>:

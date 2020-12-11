@@ -25,12 +25,6 @@
     border-top: 1px solid #333;
     padding-top: 1rem;
   }
-
-  /* TODO: remove this from every steps component */
-  /* li:nth-child(n + 2) {
-    border-top: 1px solid #333;
-    padding-top: 1rem;
-  } */
 </style>
 
 <ol>

@@ -25,11 +25,6 @@
     margin-top: 1rem;
     list-style: none;
   }
-
-  li:nth-child(n + 2) {
-    border-top: 1px solid #333;
-    padding-top: 1rem;
-  }
 </style>
 
 <!-- bloom 60 1st 210 total 2nd 340 17 to 1 -->

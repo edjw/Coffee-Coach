@@ -12,9 +12,6 @@
   li {
     list-style-position: inside;
   }
-  li:nth-child(n + 2) {
-    margin-top: 1rem;
-  }
 </style>
 
 <ol>

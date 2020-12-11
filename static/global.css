@@ -42,6 +42,17 @@ a {
   color: inherit;
 }
 
+/* Allows styling of buttons on iOS and Safari */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button {
+}
+
 main > * + *,
 section > * + *,
 section > div > * + * {
