@@ -3,7 +3,8 @@
   "theme_color": "#333333",
   "name": "Coffee Coach",
   "short_name": "Coffee Coach",
-  "display": "minimal-ui",
+  "display": "fullscreen",
+  "splash_pages": null,
   "start_url": "/",
   "icons": [
     {
