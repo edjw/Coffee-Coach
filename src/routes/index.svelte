@@ -6,6 +6,7 @@
 
 <style>
   ul {
+    margin-top: -1rem;
     padding-left: 0;
     display: table;
     border-collapse: separate;
