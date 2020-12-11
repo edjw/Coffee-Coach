@@ -6,7 +6,10 @@ run `yarn dev` to start the dev server
 
 
 --
-notes from original sapper readme
+
+--
+
+Notes from original sapper readme
 
 ```bash
 # for Rollup
