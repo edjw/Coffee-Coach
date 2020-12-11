@@ -18,6 +18,12 @@
   }
 </script>
 
+<style>
+  input::placeholder {
+    font-size: 80%;
+  }
+</style>
+
 <section>
   <p>
     <i>Grind size</i>:
@@ -32,7 +38,11 @@
   {/if}
 
   {#if setGrindSizeShown}
-    <input type="text" id="grind-size-input" bind:value={$grindSize} />
+    <input
+      type="text"
+      id="grind-size-input"
+      placeholder="Add your preferred grind size(s)"
+      bind:value={$grindSize} />
     <button id="grind-size-save" on:click={saveGrindSize}>Save</button>
   {/if}
 </section>
