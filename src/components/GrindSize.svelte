@@ -12,9 +12,10 @@
     grindSizeSaved = false;
   }
 
+  // This isn't DRY but is easier to understand imo
   function saveGrindSize() {
-    grindSizeSaved = true;
     setGrindSizeShown = false;
+    grindSizeSaved = true;
   }
 </script>
 
