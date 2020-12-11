@@ -5,7 +5,11 @@
 
   import Steps from "../../components/clever-by-james-hoffman/cleverSteps.svelte";
 
+  import GrindSize from "../../components/GrindSize.svelte";
+
   import * as store from "../../components/clever-by-james-hoffman/cleverStore";
+
+  import { grindSize } from "../../components/clever-by-james-hoffman/cleverStore";
 
   let recipe = { name: "Clever Dripper by James Hoffman" };
 </script>
@@ -13,6 +17,9 @@
 <Recipe {...recipe}>
   <div slot="ingredients">
     <Ingredients {store} />
+  </div>
+  <div slot="grind">
+    <GrindSize {grindSize} />
   </div>
   <div slot="steps">
     <Steps />

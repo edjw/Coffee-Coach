@@ -71,7 +71,7 @@
       of water.
     </p>
     <button id="startWithWater" on:click={toggleCalculator}>
-      Start with water instead ⟳
+      Start with water ⟳
     </button>
   </section>
 {:else if $currentCalculator === 'waterFirst'}
@@ -96,7 +96,7 @@
       of coffee grounds.
     </p>
     <button id="startWithCoffee" on:click={toggleCalculator}>
-      Start with coffee instead ⟳
+      Start with coffee ⟳
     </button>
   </section>
 {/if}

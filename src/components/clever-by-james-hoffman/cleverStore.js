@@ -9,6 +9,8 @@ let waterAsMultipleOfCoffee = readable(
 let waterAmount = writable("cleverWaterAmount", 250);
 let coffeeAmount = writable("cleverCoffeeAmount", 15);
 
+let grindSize = writable("cleverGrindSize", "");
+
 let currentCalculator = writable("cleverCurrentCalculator", "coffeeFirst");
 
 export {
@@ -16,4 +18,5 @@ export {
   coffeeAmount,
   waterAsMultipleOfCoffee,
   currentCalculator,
+  grindSize,
 };

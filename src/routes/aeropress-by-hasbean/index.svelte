@@ -5,7 +5,11 @@
 
   import Steps from "../../components/aeropress-by-hasbean/aeropressSteps.svelte";
 
+  import GrindSize from "../../components/GrindSize.svelte";
+
   import * as store from "../../components/aeropress-by-hasbean/aeropressStore";
+
+  import { grindSize } from "../../components/aeropress-by-hasbean/aeropressStore";
 
   let recipe = { name: "Aeropress by Hasbean" };
 </script>
@@ -13,6 +17,9 @@
 <Recipe {...recipe}>
   <div slot="ingredients">
     <Ingredients {store} />
+  </div>
+  <div slot="grind">
+    <GrindSize {grindSize} />
   </div>
   <div slot="steps">
     <Steps />

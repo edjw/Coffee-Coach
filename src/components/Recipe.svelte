@@ -30,6 +30,12 @@
 </section>
 
 <section in:fade={{ delay: 200 }}>
+  <h3>Grind</h3>
+  <p>Save your preferred grind size for this recipe</p>
+  <slot name="grind" />
+</section>
+
+<section in:fade={{ delay: 200 }}>
   <h3>Steps</h3>
   <slot name="steps" />
 </section>

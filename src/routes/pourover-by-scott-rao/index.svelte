@@ -5,7 +5,11 @@
 
   import Steps from "../../components/pourover-by-scott-rao/pouroverScottRaoSteps.svelte";
 
+  import GrindSize from "../../components/GrindSize.svelte";
+
   import * as store from "../../components/pourover-by-scott-rao/pouroverScottRaoStore.js";
+
+  import { grindSize } from "../../components/pourover-by-scott-rao/pouroverScottRaoStore.js";
 
   let recipe = { name: "Pourover by Scott Rao" };
 </script>
@@ -13,6 +17,9 @@
 <Recipe {...recipe}>
   <div slot="ingredients">
     <Ingredients {store} />
+  </div>
+  <div slot="grind">
+    <GrindSize {grindSize} />
   </div>
   <div slot="steps">
     <Steps />

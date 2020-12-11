@@ -9,6 +9,8 @@ let waterAsMultipleOfCoffee = readable(
 let waterAmount = writable("pouroverScottRaoWaterAmount", 340);
 let coffeeAmount = writable("pouroverScottRaoCoffeeAmount", 20);
 
+let grindSize = writable("aeroPressGrindSize", "");
+
 let currentCalculator = writable(
   "pouroverScottRaoCurrentCalculator",
   "coffeeFirst"
@@ -19,4 +21,5 @@ export {
   coffeeAmount,
   waterAsMultipleOfCoffee,
   currentCalculator,
+  grindSize,
 };
