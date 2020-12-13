@@ -1,28 +1,27 @@
 <script>
+  let name = "Clever Dripper by James Hoffman";
+
+  import { clever } from "../../components/store.js";
+
+  let {
+    waterAsMultipleOfCoffee,
+    waterAmount,
+    coffeeAmount,
+    grindSize,
+    currentCalculator,
+  } = clever;
+
   import Recipe from "../../components/Recipe.svelte";
-
-  import Ingredients from "../../components/Ingredients.svelte";
-
-  import Steps from "../../components/clever-by-james-hoffman/cleverSteps.svelte";
-
-  import GrindSize from "../../components/GrindSize.svelte";
-
-  import * as store from "../../components/clever-by-james-hoffman/cleverStore";
-
-  import { grindSize } from "../../components/clever-by-james-hoffman/cleverStore";
-
-  let recipe = { name: "Clever Dripper by James Hoffman" };
 </script>
 
-<Recipe {...recipe}>
-  <div slot="ingredients">
-    <Ingredients {store} />
-  </div>
-  <div slot="grind">
-    <GrindSize {grindSize} />
-  </div>
+<Recipe {name} {...clever}>
   <div slot="steps">
-    <Steps />
+    <li>Pour in all {$waterAmount}g of the water</li>
+    <li>Pour in all {$coffeeAmount}g of the coffee</li>
+    <li>Stir and let it steep for 2 minutes</li>
+    <li>Break the crust with a stir</li>
+    <li>Leave for 30 seconds to settle</li>
+    <li>Place on the cup to release the coffee</li>
   </div>
   <div slot="notes">
     <p>

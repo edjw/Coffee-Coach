@@ -1,12 +1,8 @@
 <script>
-  export let store;
-
-  let {
-    waterAmount,
-    coffeeAmount,
-    waterAsMultipleOfCoffee,
-    currentCalculator,
-  } = store;
+  export let waterAmount;
+  export let coffeeAmount;
+  export let waterAsMultipleOfCoffee;
+  export let currentCalculator;
 
   import { blur } from "svelte/transition";
 

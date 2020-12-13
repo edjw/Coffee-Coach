@@ -1,9 +1,25 @@
 <script>
   export let name;
+  export let waterAmount;
+  export let coffeeAmount;
+  export let waterAsMultipleOfCoffee;
+  export let currentCalculator;
+  export let grindSize;
+
   import { fade } from "svelte/transition";
+
+  import Ingredients from "./Ingredients.svelte";
+
+  import GrindSize from "./GrindSize.svelte";
 </script>
 
 <style>
+  ol {
+    padding-left: 0;
+  }
+  ol :global(li) {
+    list-style-position: inside;
+  }
   h2 {
     display: inline-block;
     max-width: 30ch;
@@ -26,18 +42,25 @@
 
 <section in:fade={{ delay: 100 }}>
   <h3>Ingredients</h3>
-  <slot name="ingredients" />
+  <Ingredients
+    {waterAmount}
+    {coffeeAmount}
+    {waterAsMultipleOfCoffee}
+    {currentCalculator} />
 </section>
 
 <section in:fade={{ delay: 200 }}>
   <h3>Grind</h3>
   <p>Save your preferred grind size for this recipe</p>
-  <slot name="grind" />
+  <GrindSize {grindSize} />
 </section>
 
 <section in:fade={{ delay: 200 }}>
   <h3>Steps</h3>
-  <slot name="steps" />
+  <!-- <Steps /> -->
+  <ol>
+    <slot name="steps" />
+  </ol>
 </section>
 
 <section in:fade={{ delay: 300 }}>

@@ -1,30 +1,26 @@
 <script>
+  let name = "French Press by James Hoffman";
+
+  import { frenchPress } from "../../components/store.js";
+
+  let {
+    waterAsMultipleOfCoffee,
+    waterAmount,
+    coffeeAmount,
+    grindSize,
+    currentCalculator,
+  } = frenchPress;
+
   import Recipe from "../../components/Recipe.svelte";
-
-  import Ingredients from "../../components/Ingredients.svelte";
-
-  import Steps from "../../components/french-press-by-james-hoffman/frenchPressSteps.svelte";
-
-  import GrindSize from "../../components/GrindSize.svelte";
-
-  import * as store from "../../components/french-press-by-james-hoffman/frenchPressStore";
-
-  import { grindSize } from "../../components/french-press-by-james-hoffman/frenchPressStore";
-
-  let recipe = {
-    name: "French Press by James Hoffman",
-  };
 </script>
 
-<Recipe {...recipe}>
-  <div slot="ingredients">
-    <Ingredients {store} />
-  </div>
-  <div slot="grind">
-    <GrindSize {grindSize} />
-  </div>
+<Recipe {name} {...frenchPress}>
   <div slot="steps">
-    <Steps />
+    <li>Pour in the coffee and all {$waterAmount}g of the water</li>
+    <li>Let it sit for 4 minutes</li>
+    <li>Stir the crust. Scoop up the foam and coffee bits off the top</li>
+    <li>Push the plunger down to just to underneath the surface</li>
+    <li>Pour gently and carefully</li>
   </div>
   <div slot="notes">
     <p>

@@ -1,28 +1,53 @@
 <script>
+  let name = "v60 by James Hoffman";
+
+  import { v60 } from "../../components/store.js";
+
+  let {
+    waterAsMultipleOfCoffee,
+    waterAmount,
+    coffeeAmount,
+    grindSize,
+    currentCalculator,
+  } = v60;
+
+  const toOneDecimalPlace = (number) => {
+    return Math.round(number * 10) / 10;
+  };
+
+  $: minimumBloom = toOneDecimalPlace($coffeeAmount * 2);
+
+  $: maximumBloom = toOneDecimalPlace($coffeeAmount * 3);
+
+  $: firstPour = toOneDecimalPlace($waterAmount * 0.6);
+
+  $: totalPour = toOneDecimalPlace($waterAmount);
+
   import Recipe from "../../components/Recipe.svelte";
-
-  import Ingredients from "../../components/Ingredients.svelte";
-
-  import Steps from "../../components/v60-by-james-hoffman/v60Steps.svelte";
-
-  import GrindSize from "../../components/GrindSize.svelte";
-
-  import * as store from "../../components/v60-by-james-hoffman/v60store";
-
-  import { grindSize } from "../../components/v60-by-james-hoffman/v60store";
-
-  let recipe = { name: "v60 by James Hoffman" };
 </script>
 
-<Recipe {...recipe}>
-  <div slot="ingredients">
-    <Ingredients {store} />
-  </div>
-  <div slot="grind">
-    <GrindSize {grindSize} />
-  </div>
+<Recipe {name} {...v60}>
   <div slot="steps">
-    <Steps />
+    <li>
+      <i>0 - 45s</i>: Pour the bloom with
+      <strong>{#if $coffeeAmount === undefined || isNaN($waterAmount)}
+          0g (maximum 0g) of water
+        {:else}{minimumBloom}g (maximum {maximumBloom}g) of water{/if}
+      </strong>
+    </li>
+    <li>
+      <i>45s - 1m15s</i>: Pour again until you've poured
+      <strong>{#if $coffeeAmount === undefined || isNaN($waterAmount)}
+          0g of water
+        {:else}{firstPour}g of water{/if}</strong>
+    </li>
+    <li>
+      <i>1m15s - 1m45s</i>: Pour again until you've poured a final
+      <strong>total of
+        {#if $coffeeAmount === undefined || isNaN($waterAmount)}
+          0g
+        {:else}{totalPour}g{/if}</strong>
+    </li>
   </div>
   <div slot="notes">
     <p>

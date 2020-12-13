@@ -1,29 +1,35 @@
 <script>
+  let name = "Aeropress by Hasbean";
+
+  import { aeropress } from "../../components/store.js";
+
+  let {
+    waterAsMultipleOfCoffee,
+    waterAmount,
+    coffeeAmount,
+    grindSize,
+    currentCalculator,
+  } = aeropress;
+
+  let dilutionAmount;
+  $: dilutionAmount = Math.round((waterAmount / 2.5) * 1) / 1;
+
   import Recipe from "../../components/Recipe.svelte";
-
-  import Ingredients from "../../components/Ingredients.svelte";
-
-  import Steps from "../../components/aeropress-by-hasbean/aeropressSteps.svelte";
-
-  import GrindSize from "../../components/GrindSize.svelte";
-
-  import * as store from "../../components/aeropress-by-hasbean/aeropressStore";
-
-  import { grindSize } from "../../components/aeropress-by-hasbean/aeropressStore";
-
-  let recipe = { name: "Aeropress by Hasbean" };
 </script>
 
-<Recipe {...recipe}>
-  <div slot="ingredients">
-    <Ingredients {store} />
-  </div>
-  <div slot="grind">
-    <GrindSize {grindSize} />
-  </div>
+<Recipe {name} {...aeropress}>
   <div slot="steps">
-    <Steps />
+    <li>
+      With an inverted Aeropress, pour in the
+      {$coffeeAmount}g of the coffee
+    </li>
+    <li>Pour in all {$waterAmount}g of the water</li>
+    <li>Stir for 10 seconds</li>
+    <li>Steep for 30 seconds</li>
+    <li>Plunge</li>
+    <li>Optionally, dilute with up to {dilutionAmount}g of water</li>
   </div>
+
   <div slot="notes">
     <p>
       This is a recipe slightly adapted from
