@@ -10,3 +10,4 @@ Run `yarn dev` to start the dev server
 1. Add new route to the `routes` folder.
 2. Add calculations, notes, and steps to the index.svelte file in that new route.
 3. Add data for the recipe to `src/components/store.js`
+4. Add title and route slug to the `allRecipes.js` file to add the recipe to the homepage.
