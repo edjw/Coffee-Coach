@@ -41,13 +41,15 @@
   {/if}
 
   {#if setGrindSizeShown}
-    <input
-      type="text"
-      id="grind-size-input"
-      placeholder="Add your preferred grind size(s)"
-      bind:value={$grindSize} />
-    <Button id="grid-size-save" clickAction={saveGrindSize} type="submit">
-      Save
-    </Button>
+    <form>
+      <input
+        type="text"
+        id="grind-size-input"
+        placeholder="Add your preferred grind size(s)"
+        bind:value={$grindSize} />
+      <Button id="grid-size-save" clickAction={saveGrindSize} type="submit">
+        Save
+      </Button>
+    </form>
   {/if}
 </section>
