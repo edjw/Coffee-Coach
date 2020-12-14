@@ -4,12 +4,6 @@
 </script>
 
 <style>
-  header {
-    max-width: 56rem;
-    padding: 1rem 2rem 0 3rem;
-    /* margin: 0 auto; */
-  }
-
   h1 a {
     text-decoration: none;
   }
@@ -21,7 +15,5 @@
   }
 </style>
 
-<header>
-  <h1><a rel="prefetch" href="/">{title}</a></h1>
-  <p>{subtitle}</p>
-</header>
+<h1><a rel="prefetch" href="/">{title}</a></h1>
+<p>{subtitle}</p>

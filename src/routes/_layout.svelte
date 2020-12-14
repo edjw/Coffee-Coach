@@ -5,30 +5,51 @@
 </script>
 
 <style>
+  :global(#sapper) {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header" "main" "footer";
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+
+  :global(#sapper) > header {
+    grid-area: header;
+  }
+
+  :global(#sapper) > main {
+    grid-area: main;
+  }
+
+  :global(#sapper) > footer {
+    grid-area: footer;
+  }
+
+  header,
   main,
   footer {
-    max-width: 56rem;
-    padding: 0 2rem 1rem 3rem;
-    /* margin: 0 auto; */
+    padding: 1rem 2rem 1rem 3rem;
   }
 
   footer {
     border-top: 1px solid #333;
     margin-top: 2rem;
-    padding-top: 1rem;
   }
 
-  div {
-    margin-top: 2rem;
+  :global(main > * + *),
+  :global(section > * + *) {
+    margin-top: 1rem;
   }
 </style>
 
-<Titles />
+<header>
+  <Titles />
+</header>
 
 <main transition:fade={{ delay: 100 }}>
-  <div>
-    <slot />
-  </div>
+  <slot />
 </main>
 
 <footer transition:fade={{ delay: 300 }}>
