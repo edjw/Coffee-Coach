@@ -50,11 +50,6 @@ button,
   -webkit-appearance: button;
 }
 
-button {
-  background-color: #ffffff;
-  border: 1px solid #333;
-}
-
 main > * + *,
 section > * + *,
 section > div > * + * {

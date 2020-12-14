@@ -35,6 +35,8 @@
       coffeeAmount.set(secondIngredientAmount);
     }
   }
+
+  import Button from "./Button.svelte";
 </script>
 
 <style>
@@ -66,9 +68,9 @@
         {:else}{secondIngredientAmount}g{/if}</strong>
       of water.
     </p>
-    <button id="startWithWater" on:click={toggleCalculator}>
+    <Button id="startWithWater" clickAction={toggleCalculator}>
       Start with water ⟳
-    </button>
+    </Button>
   </section>
 {:else if $currentCalculator === 'waterFirst'}
   <section id="{$currentCalculator}Calculator" in:blur={{ delay: 100 }}>
@@ -91,8 +93,8 @@
         {:else}{secondIngredientAmount}g{/if}</strong>
       of coffee grounds.
     </p>
-    <button id="startWithCoffee" on:click={toggleCalculator}>
+    <Button id="startWithCoffee" clickAction={toggleCalculator}>
       Start with coffee ⟳
-    </button>
+    </Button>
   </section>
 {/if}

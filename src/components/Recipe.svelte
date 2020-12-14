@@ -19,6 +19,7 @@
   }
   ol :global(li) {
     list-style-position: inside;
+    margin-top: 1rem;
   }
   h2 {
     display: inline-block;
@@ -57,7 +58,6 @@
 
 <section in:fade={{ delay: 200 }}>
   <h3>Steps</h3>
-  <!-- <Steps /> -->
   <ol>
     <slot name="steps" />
   </ol>

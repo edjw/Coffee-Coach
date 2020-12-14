@@ -17,6 +17,8 @@
     setGrindSizeShown = false;
     grindSizeSaved = true;
   }
+
+  import Button from "./Button.svelte";
 </script>
 
 <style>
@@ -31,11 +33,11 @@
     {#if $grindSize && !setGrindSizeShown}
       <strong>{$grindSize}</strong>
     {:else if !setGrindSizeShown}
-      <button on:click={showSetGrindSize}>Set grind</button>
+      <Button clickAction={showSetGrindSize}>Set grind</Button>
     {/if}
   </p>
   {#if $grindSize && grindSizeSaved}
-    <button on:click={showSetGrindSize}>Change grind</button>
+    <Button clickAction={showSetGrindSize}>Change grind</Button>
   {/if}
 
   {#if setGrindSizeShown}
@@ -44,6 +46,8 @@
       id="grind-size-input"
       placeholder="Add your preferred grind size(s)"
       bind:value={$grindSize} />
-    <button id="grind-size-save" on:click={saveGrindSize}>Save</button>
+    <Button id="grid-size-save" clickAction={saveGrindSize} type="submit">
+      Save
+    </Button>
   {/if}
 </section>
