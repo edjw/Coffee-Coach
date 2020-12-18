@@ -48,6 +48,8 @@
           0g
         {:else}{totalPour}g{/if}</strong>
     </li>
+    <li>Give it a stir once one way, then once the other way</li>
+    <li>After the water has drained away a bit, give it a swirl</li>
   </div>
   <div slot="notes">
     <p>
