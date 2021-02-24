@@ -1,5 +1,5 @@
 [build]
-  command = "yarn export"
+  command = "npm run export"
   publish = "__sapper__/export"
 
 [[headers]]
