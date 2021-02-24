@@ -9,4 +9,4 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "same-origin"
-    Content-Security-Policy = "default-src 'none'; img-src 'self' data:; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; worker-src 'self'"
+    Content-Security-Policy = " default-src 'none'; connect-src 'self' https://coffee-coach.netlify.app; img-src 'self' data:; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; worker-src 'self'"
