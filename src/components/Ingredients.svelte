@@ -63,7 +63,7 @@
       bind:value={$coffeeAmount} />
     <p>
       Use
-      <strong>{#if isNaN($waterAmount)}
+      <strong>{#if Number.isNaN($waterAmount)}
           0g
         {:else}{secondIngredientAmount}g{/if}</strong>
       of water.
@@ -88,7 +88,7 @@
       bind:value={$waterAmount} />
     <p>
       Use
-      <strong>{#if isNaN($waterAmount)}
+      <strong>{#if Number.isNaN($waterAmount)}
           0g
         {:else}{secondIngredientAmount}g{/if}</strong>
       of coffee grounds.

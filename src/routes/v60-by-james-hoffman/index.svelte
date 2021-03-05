@@ -30,23 +30,28 @@
   <div slot="steps">
     <li>
       <i>0 - 45s</i>: Pour the bloom with
-      <strong>{#if $coffeeAmount === undefined || isNaN($waterAmount)}
+      <strong
+        >{#if $coffeeAmount === undefined || Number.isNan($waterAmount)}
           0g (maximum 0g) of water
         {:else}{minimumBloom}g (maximum {maximumBloom}g) of water{/if}
       </strong>
     </li>
     <li>
       <i>45s - 1m15s</i>: Pour again until you've poured
-      <strong>{#if $coffeeAmount === undefined || isNaN($waterAmount)}
+      <strong
+        >{#if $coffeeAmount === undefined || Number.isNan($waterAmount)}
           0g of water
-        {:else}{firstPour}g of water{/if}</strong>
+        {:else}{firstPour}g of water{/if}</strong
+      >
     </li>
     <li>
       <i>1m15s - 1m45s</i>: Pour again until you've poured a final
-      <strong>total of
-        {#if $coffeeAmount === undefined || isNaN($waterAmount)}
+      <strong
+        >total of
+        {#if $coffeeAmount === undefined || Number.isNan($waterAmount)}
           0g
-        {:else}{totalPour}g{/if}</strong>
+        {:else}{totalPour}g{/if}</strong
+      >
     </li>
     <li>Give it a stir once one way, then once the other way</li>
     <li>After the water has drained away a bit, give it a swirl</li>
@@ -54,8 +59,9 @@
   <div slot="notes">
     <p>
       This is a recipe simplified from
-      <a href="https://www.youtube.com/watch?v=AI4ynXzkSQo">James Hoffman's
-        video '<i>The Ultimate V60 Technique</i></a>.'
+      <a href="https://www.youtube.com/watch?v=AI4ynXzkSQo"
+        >James Hoffman's video '<i>The Ultimate V60 Technique</i></a
+      >.'
     </p>
 
     <p>It uses a ratio of 30g coffee to 500g water (1 to 16.67).</p>

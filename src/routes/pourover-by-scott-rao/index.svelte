@@ -31,7 +31,7 @@
 
     <li>
       <i>0 - 45s</i>: Pour the bloom with
-      <strong>{#if $coffeeAmount === undefined || isNaN($waterAmount)}
+      <strong>{#if $coffeeAmount === undefined || Number.isNan($waterAmount)}
           0g (maximum 0g) of water
         {:else}{bloom}g of water{/if}.
       </strong>
@@ -39,7 +39,7 @@
     </li>
     <li>
       <i>45s</i>: Pour again until you've poured
-      <strong>{#if $coffeeAmount === undefined || isNaN($waterAmount)}
+      <strong>{#if $coffeeAmount === undefined || Number.isNan($waterAmount)}
           0g of water
         {:else}{firstPour}g of water{/if}</strong>
     </li>
@@ -47,7 +47,7 @@
       <i>When half of the water has drained</i>: Pour again until you've poured
       a final
       <strong>total of
-        {#if $coffeeAmount === undefined || isNaN($waterAmount)}
+        {#if $coffeeAmount === undefined || Number.isNan($waterAmount)}
           0g
         {:else}{totalPour}g{/if}</strong>
     </li>
