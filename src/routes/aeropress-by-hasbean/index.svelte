@@ -12,7 +12,7 @@
   } = aeropress;
 
   let dilutionAmount;
-  $: dilutionAmount = Math.round((waterAmount / 2.5) * 1) / 1;
+  $: dilutionAmount = Math.round(($waterAmount / 2.5) * 1) / 1;
 
   import Recipe from "../../components/Recipe.svelte";
 </script>
